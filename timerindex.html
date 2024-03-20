@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 1px 10px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #1649b6;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px #38e138;
+        }
+
+        .button:hover {
+            background-color: #e138c2
+        }
+
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        body {
+
+            color: rgb(10, 238, 79);
+            background-image: url('https://shorturl.at/elEH8');
+        }
+
+
+        h1,
+        h2 {
+            color: #fe06a3;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #timer {
+            font-size: 2em;
+            margin-top: 20px;
+        }
+
+        #event-name {
+            margin-top: 20px;
+        }
+
+        table {
+            margin: 50px auto;
+            border-collapse: 1px solid;
+            width: 50%;
+        }
+
+        th,
+        td {
+            background-color: #3f29e3;
+            color: #f304af;
+            border: 5px solid #3ff607;
+            text-align: center;
+            padding: 10px;
+        }
+
+        tr:hover {
+            background-color: rgb(176, 23, 155);
+        }
+
+        label[for="event-name"] {
+            font-size: 20px;
+        }
+
+        input[type=text] {
+            border: 2px solid #3ff607;
+            border-radius: 4px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIMER</title>
+    <link rel="icon" href="C:\Users\pbhuv\OneDrive\Desktop\intern\favicon-16x16.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- <a href="https://shorturl.at/elEH8" alt="background image" width="100%"></a> -->
+    <h1><b>
+            <center>Event timer
+        </b></center>
+    </h1>
+    <label for="event-name">Event Name:</label>
+    <input type="text" id="event-name"><br>
+    <span id="timer">00:00:00 </span><br> </span>
+
+    <button class="button" id="start-btn" onclick="startBtnClick()">START</button>
+    <button class="button" id="end-btn" onclick="stopBtnClick()">STOP</button>
+    <button class="button" id="reset-btn" onclick="resetBtnClick()">RESET</button>
+    <button class="button" id="flag-btn" onclick="flagBtnClick()">FLAG</button>
+    <button class="button" id="clear-btn" onclick="clearBtnClick()">CLEAR</button>
+    <table id="event-table">
+        <thead>
+            <tr>
+                <th>Event Name</th>
+                <th>Duration</th>
+            </tr>
+        </thead>
+        <tbody id="event-records">
+        </tbody>
+    </table>
+    <script src="./script1.js"></script>
+</body>
+
+</html>
